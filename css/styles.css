@@ -12,12 +12,48 @@ html {
   font-family: "Arial", sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+  color: #000000;
+}
+
 .c-btn {
   background-color: transparent;
   border: none;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   cursor: pointer;
+}
+.c-btn--progress {
+  position: relative;
+  background-color: #4c00ff;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0.5rem solid #ffffff;
+  transition: background-color 0.3s ease;
+}
+.c-btn--progress:hover {
+  background-color: rgb(60.8, 0, 204);
+}
+.c-btn--progress::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(#4c00ff 0% 25%, #e0e0e0 25% 100%);
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+}
+.c-btn--progress img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .c-onboarding__background {
@@ -32,9 +68,12 @@ html {
   align-items: center;
 }
 .c-onboarding__mobile-screen {
-  width: 430px;
-  height: 932px;
-  background-color: #f7f1ee;
+  max-width: 430px;
+  max-height: 932px;
+  width: 41.5384615385vh;
+  height: 90%;
+  aspect-ratio: 6/13;
+  background-color: #ffffff;
   border-radius: 3rem;
   border: 0.5rem solid #000000;
   overflow: hidden;
@@ -45,14 +84,15 @@ html {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 2fr;
+  grid-template-rows: auto 2fr 3fr;
 }
 .c-onboarding__header {
   position: relative;
-  padding: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
-  border-radius: 0 0 2rem 2rem;
+  border-radius: 2rem;
   background-color: #ffffff;
   grid-row: 1/2;
 }
@@ -60,7 +100,31 @@ html {
   grid-row: 2/3;
   width: 100%;
   height: 100%;
-  background-color: #4c00ff;
+}
+.c-onboarding__footer {
+  z-index: 1;
+  grid-row: 3/4;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.c-onboarding__text-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  max-width: 90%;
+}
+.c-onboarding__buttons-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.c-onboarding__description {
+  font-size: 1.25rem;
+  color: #515151;
 }
 .c-onboarding__logo {
   position: absolute;
