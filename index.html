@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocuSign Mobile Onboarding</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <script src="js/app.js"></script>
 </head>
 
@@ -15,18 +16,18 @@
             <!-- Onboarding screens will be displayed here -->
             <div class="c-onboarding__content">
                 <div class="c-onboarding__header">
-                    <button class="c-btn">Back</button>
+                    <button class="c-btn js-back-btn">Back</button>
                     <img class="c-onboarding__logo" src="assets/images/logo.svg" alt="DocuSign Logo">
                 </div>
-                <div class="c-onboarding__animation-container"></div>
+                <div class="c-onboarding__animation-container js-animation-container"></div>
                 <div class="c-onboarding__footer">
                     <div class="c-onboarding__text-container">
                         <h1 class="c-onboarding__title js-title">Sign in Seconds</h1>
                         <p class="c-onboarding__description js-description">Skip the printer. Secure, legal, and paperless in a heartbeat.</p>
                     </div>
                     <div class="c-onboarding__buttons-container">
-                        <button class="c-btn c-btn--progress js-progress"><img src="assets/images/arrow.svg" alt="Arrow"></button>
-                        <button class="c-btn">Skip</button>
+                        <button class="c-btn c-btn--progress js-progress-btn"><img src="assets/images/arrow.svg" alt="Arrow"></button>
+                        <button class="c-btn js-skip-btn">Skip</button>
                     </div>
                 </div>
             </div>
