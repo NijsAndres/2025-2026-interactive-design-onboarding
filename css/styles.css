@@ -105,7 +105,7 @@ h1 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .c-onboarding__animation-container svg {
   max-width: 100%;
