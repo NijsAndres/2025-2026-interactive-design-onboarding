@@ -46,10 +46,11 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: conic-gradient(#4c00ff 0% 0%, #e0e0e0 0% 100%);
+  background: conic-gradient(#4c00ff 0% var(--progress, 0%), #e0e0e0 var(--progress, 0%) 100%);
   width: 7.5rem;
   height: 7.5rem;
   border-radius: 50%;
+  transition: all 0.3s ease;
 }
 .c-btn--progress img {
   width: 1.5rem;

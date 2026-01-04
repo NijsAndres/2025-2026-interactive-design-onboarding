@@ -51,6 +51,7 @@ renderOnboardingStep = () => {
 
   const percentage = (progress / 4) * 100;
   console.log(`Progress percentage: ${percentage}%`);
+  progressBtn.style.setProperty("--progress", `${percentage}%`);
 
   // Clear previous animation
   if (currentAnimation) {
