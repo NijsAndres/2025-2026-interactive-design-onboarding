@@ -70,6 +70,7 @@ h1 {
 
 .c-onboarding {
   &__background {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-image: url("../assets/images/bg-logo.svg");
@@ -79,9 +80,24 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 15%;
+      height: 4rem;
+      background-image: url("../assets/images/text-logo.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      right: 2rem;
+      bottom: 2rem;
+    }
   }
 
   &__mobile-screen {
+    z-index: 1;
     max-width: 430px;
     max-height: 932px;
     width: calc(90vh / 13 * 6);
