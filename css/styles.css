@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+.c-btn {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c-onboarding__background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/images/bg-logo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-onboarding__mobile-screen {
+  width: 430px;
+  height: 932px;
+  background-color: #f7f1ee;
+  border-radius: 3rem;
+  border: 0.5rem solid #000000;
+  overflow: hidden;
+  position: relative;
+}
+.c-onboarding__content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 2fr;
+}
+.c-onboarding__header {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 2rem 2rem;
+  background-color: #ffffff;
+  grid-row: 1/2;
+}
+.c-onboarding__animation-container {
+  grid-row: 2/3;
+  width: 100%;
+  height: 100%;
+  background-color: #4c00ff;
+}
+.c-onboarding__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

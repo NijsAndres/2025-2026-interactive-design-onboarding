@@ -1,0 +1,83 @@
+$color-primary: #4c00ff;
+$color-secondary: #ff5252;
+$color-white: #ffffff;
+$color-gray: #f7f1ee;
+$color-black: #000000;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+}
+
+.c-btn {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c-onboarding {
+  &__background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../assets/images/bg-logo.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__mobile-screen {
+    width: 430px;
+    height: 932px;
+    background-color: $color-gray;
+    border-radius: 3rem;
+    border: 0.5rem solid $color-black;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 2fr;
+  }
+
+  &__header {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 2rem 2rem;
+    background-color: $color-white;
+    grid-row: 1 / 2;
+  }
+
+  &__animation-container {
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
